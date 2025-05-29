@@ -1,0 +1,739 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>FYB - Technologies - Career -  Backend Developer - Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="dot" />
+
+    <!-- ** CSS Plugins Needed for the Project ** -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link href="./css/style.css" rel="stylesheet" media="screen" />
+    <!--  <link rel="stylesheet" href="path/to/bootstrap.min.css"> Include Bootstrap CSS -->
+<style>
+    body, h1, h2, h3, h4, h5, h6, p, a, span, button, input {
+      font-family: 'Montserrat', sans-serif !important;
+      color: #2B2C30;
+    }
+    /* You can now remove other font-family declarations or override them with Rubik */
+  </style>
+  <style>
+
+  /* Initially hide the menu */
+.collapse {
+  display: none;
+}
+
+/* Show the menu when the container or its descendants are focused */
+/* This CSS-only approach might not be fully effective without Bootstrap JS,
+   especially on touch devices. */
+.container:focus-within .collapse {
+  display: block; /* Or flex, grid, etc. depending on your layout */
+}
+
+/* Ensure the toggler button is focusable if it's not already */
+.navbar-toggler {
+  outline: none; /* Optional: remove default focus outline if desired */
+}
+  .main-header {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(
+      80deg,
+      rgba(109, 181, 248, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(217, 142, 243, 0.2),
+      rgba(251, 220, 255, 0.1),
+      rgba(203, 91, 216, 0.1),
+      rgba(217, 142, 243, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(202, 229, 255, 0.2),
+      rgba(109, 181, 248, 0.2),
+      rgba(114, 221, 255, 0.2)
+    ),
+    url('img/particle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay; /* Ensures gradient + image mix visually */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .logo-img {
+      max-height: 60px;
+      object-fit: contain;
+    }
+    .book-call-btn:hover {
+      background: #f0f0f0;
+    }
+
+  </style>
+  </head>
+<body>
+<style>
+  /* Ensure consistent font and size for nav items */
+.nav-link {
+  font-family: 'Montserrat', sans-serif !important; /* Or any font you prefer */
+  font-size: 16px; /* Set a consistent font size */
+  font-weight: normal; /* Set a consistent font weight */
+  color: #000; /* Or any color you prefer for the text */
+  text-decoration: none; /* Remove underlines from links */
+}
+
+/* Optional: Styling for active links if needed */
+.nav-item .active {
+  font-weight: bold; /* Make the active nav item bold */
+}
+
+</style>
+ <header class="main-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand px-2" href="index.html">
+        <img src="img/logo.png" alt="Site Logo" class="logo-img">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navigation"> <!-- Added id="navigation" matching data-target -->
+        <ul class="navbar-nav mx-auto page-navigation">
+          <li class="nav-item"><a class="nav-link pill-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="https://chat.whatsapp.com/I1V7jwr65wh2llMopYVnKR" class="book-call-btn">Book a Call</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Your content goes here -->
+
+  <script>
+  // Get current page URL
+  const currentUrl = window.location.href;
+
+  // Loop through each nav link
+  document.querySelectorAll('.nav-link').forEach(link => {
+    // If the link's href matches the current URL, make it bold
+    if (currentUrl.includes(link.getAttribute('href'))) {
+      link.style.fontWeight = 'bold';
+    }
+  });
+</script>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+<!-- Include Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  
+<!-- banner -->
+<div class="">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 mx-auto text-center text-white">
+       
+
+</div>
+      </div>
+    </div>
+
+
+<style>
+  .banner-section {
+    background: linear-gradient(
+      80deg,
+      rgba(109, 181, 248, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(217, 142, 243, 0.2),
+      rgba(251, 220, 255, 0.1),
+      rgba(203, 91, 216, 0.1),
+      rgba(217, 142, 243, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(202, 229, 255, 0.2),
+      rgba(109, 181, 248, 0.2),
+      rgba(114, 221, 255, 0.2)
+    ),
+    url('img/particle.png');
+    background-size: cover;
+	    border-radius: 0 0 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    padding: 150px 0;
+    position: relative;
+    color: black;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* Expanded background class */
+  .banner-section.expanded {
+    padding: 600px 0;
+    background-size: contain;
+  }
+
+  /* Optional button styling */
+  .expand-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff33;
+    color: black;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .expand-btn:hover {
+    background-color: #ffffff55;
+  }
+  
+    .banner-section h1,
+  .banner-section h6 {
+    margin-bottom: 20px;
+  }
+</style>
+
+<script>
+  function toggleBackground() {
+    document.getElementById('bannerSection').classList.toggle('expanded');
+  }
+</script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<!-- /banner -->
+		
+		
+
+<!-- careeers -->
+
+  
+
+</header>
+
+ <!-- Include Bootstrap JS and dependencies -->
+  <script src="path/to/bootstrap.bundle.min.js"></script>
+	<!-- /header -->
+	
+	
+	
+	
+	
+	
+<!-- topics -->
+<style>
+  .section {
+    background-image: url('./img/footer1.png');
+    background-repeat: repeat; /* ensures it repeats both vertically and horizontally */
+    background-size: auto; /* or you can use `contain` or a specific value like `100px` */
+    background-position: top left;
+  }
+</style>
+<section class="section">
+  <div class="container">
+    </div>
+	
+	
+  <style>
+
+
+.breadcrumb {
+  position: absolute;
+  top: 100px;
+  left: 106px;
+  font-size: 12px;
+}
+
+    .breadcrumb a {
+      text-decoration: none;
+      color: #blue;
+    }
+
+
+.job-details-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 103px;
+}
+.job-info {
+  display: flex;
+  align-items: center;
+  flex: -1 1 250px; /* Responsive: 3 per row, stacks on small screens */
+  min-width: 200px;
+}
+.job-info .icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: left;
+   
+}
+
+.location {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.job-detail {
+  font-size: 14px;
+  color: #333;
+}
+
+    .job-info img {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+    }
+
+
+    .description, .section-box13 {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .section-box13 {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .section-box13 ul {
+      padding-left: 20px;
+    }
+
+    .section-box13 li {
+      margin-bottom: 10px;
+    }
+
+    .description {
+      margin-top: 20px;
+      line-height: 1.5;
+	   margin:45px 0 0px 105px;
+
+    }
+	
+	.ts{
+	 margin:45px 0 0px 105px;}
+	 
+	 .KeyResponsibilities {
+      margin:45px 0 0px 105px;
+      line-height: 1.5;
+
+    }
+	
+ .apply-button {
+  position: absolute;
+  top: 143px;       /* Adjust based on where you want it */
+  left: 1000px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(
+      80deg,
+      #6db5f866 .47%,
+      #999cf766 9.8%,
+      #d98ef366 17.42%,
+      #fbdcff3d 31.59%,
+      #cb5bd83d 46.87%,
+      #d98ef366 55.73%,
+      #999cf766 65.02%,
+      #cae5ff66 77.71%,
+      #6db5f866 89.55%,
+      #72ddff66 98.78%
+    ),
+    #f8f6f2;
+  box-shadow: 0 10px 15px #a738fe40;
+  color: rgb(43 44 48 / 1);
+  border: none;
+  text-decoration: none;
+}
+
+
+
+  </style>
+<div class="breadcrumb" style="display: flex; align-items: center; gap: 4px;">
+  <img src="./img/home-breadcrumb.svg" alt="Home" style="width:16px; height:16px;">
+  <a href="./frontend-careers.html" style="display: inline-flex; align-items: center; gap: 4px;">
+    Careers<img src="./img/arrow-breadcrumb.svg" alt="Arrow" style="width:12px; height:12px;">
+  </a>Backend Developer - Python
+</div>
+
+<div class="ts">
+  <h1 style="font-size: 24px; margin: 45 0 5px 105px;"><b>Backend Developer - Python</b></h1> <a href="mailto:hr@fyb-technologies.com" class="apply-button">Apply Now</a></div>
+  <h3 style="font-size: 16px; margin: 0 0 0px 105px;">Full Time</h3>
+
+<h2 style="font-size: 24px; margin: 45px 0 0px 105px;"><b>Job Details</b></h2>
+<div class="job-details-grid">
+
+  <!-- Location -->
+  <div class="job-info">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+        <g clip-path="url(#clip0)">
+          <path d="M7.13822 20L6.33355 19.1131C6.07398 18.8276 0 12.0441 0 7.13822C0 3.20138 3.20138 0 7.13822 0C11.0751 0 14.2764 3.20138 14.2764 7.13822C14.2764 12.0398 8.19814 18.8233 7.94289 19.1131L7.13822 20ZM7.13822 2.1631C4.39541 2.1631 2.1631 4.39541 2.1631 7.13822C2.1631 10.0454 5.252 14.4235 7.13822 16.7251C9.02444 14.4279 12.1133 10.0498 12.1133 7.13822C12.1133 4.39541 9.88103 2.1631 7.13822 2.1631ZM7.13822 10.3829C5.34718 10.3829 3.89358 8.92927 3.89358 7.13822C3.89358 5.34718 5.34718 3.89358 7.13822 3.89358C8.92927 3.89358 10.3829 5.34718 10.3829 7.13822C10.3829 8.92927 8.92927 10.3829 7.13822 10.3829ZM7.13822 6.05667C6.54121 6.05667 6.05667 6.54121 6.05667 7.13822C6.05667 7.73524 6.54121 8.21977 7.13822 8.21977C7.73524 8.21977 8.21977 7.73524 8.21977 7.13822C8.21977 6.54121 7.73524 6.05667 7.13822 6.05667Z" fill="#2B2C30"/>
+        </g>
+        <defs>
+          <clipPath id="clip0"><rect width="14.2764" height="20" fill="white"/></clipPath>
+        </defs>
+      </svg>
+    </div>
+    <div>
+      <div class="location">Location</div>
+      <div class="job-detail">BGC, Taguig</div>
+    </div>
+  </div>
+
+  <!-- Job Type -->
+  <div class="job-info">
+    <div class="icon">
+      <img src="./img/bag.png" alt="Job Type" />
+    </div>
+    <div>
+      <div class="location">Job Type</div>
+      <div class="job-detail">Full-Time</div>
+    </div>
+  </div>
+
+  <!-- Shift & Schedule -->
+  <div class="job-info">
+    <div class="icon">
+      <img src="./img/clock.png" alt="Schedule" />
+    </div>
+    <div>
+      <br><div class="location">Shift and Schedule</div>
+      <div class="job-detail">8 hour shift<br>Monday to Friday</div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="description">
+  <h1 style="font-size: 24px; margin: 45 0 5px 105px;"><b>Description</b></h1>
+   <p style="font-size: 16px; background-color: rgba(241 231 239 / 30%); padding: 16px; border-radius: 8px;margin: 13 0 5px 90px; width:1500px;"> 
+   As a Python Developer with a frontend focus, you will design, develop, test, and maintain Python-based applications while integrating with frontend technologies. 
+   You will collaborate with cross-functional teams, including front-end developers, to build high-quality software solutions. Strong problem-solving abilities and the capacity to work well in a team environment are essential for success in this role.
+
+</p>
+  </div>
+
+
+	<div class="KeyResponsibilities">
+  <h1 style="font-size: 24px; margin: 45 0 5px 105px;"><b>Key Responsibilities</b></h1> 
+  <div class="section-box">
+    <ul style="font-size: 16px; background-color: rgba(241 231 239 / 30%); padding: 16px; border-radius: 8px;margin: 13 0 5px 90px; width:1500px;">
+		
+     <li>• Develop and maintain Python applications, ensuring high performance, scalability, and responsiveness.</li>
+  <li>• Collaborate closely with front-end developers to integrate front-end user interfaces with Python back-end logic.</li>
+  <li>• Write clean, maintainable, and efficient code adhering to industry best practices.</li>
+  <li>• Conduct code reviews, providing constructive feedback to team members.</li>
+  <li>• Debug, troubleshoot, and optimize applications for maximum performance.</li>
+  <li>• Design and implement RESTful APIs and integrate third-party services.</li>
+  <li>• Create and manage databases to ensure data integrity and performance optimization.</li>
+  <li>• Stay current with the latest industry trends, technologies, and best practices in both Python and frontend development.</li>
+  <li>• Participate in agile development processes, attending daily stand-ups and sprint planning sessions.</li>
+</ul>
+  </div>
+  
+   <h1 style="font-size: 24px; margin: 45 0 5px 105px;"><b>Qualifications:</b></h1>
+  <div class="section-box">
+    <ul style="font-size: 16px; background-color: rgba(241 231 239 / 30%); padding: 16px; border-radius: 8px;margin: 13 0 5px 90px; width:900px;">
+  <li>• Proven experience as a Python Developer with a strong understanding of Python libraries and frameworks (e.g., Django, Flask, FastAPI).</li>
+  <li>• Solid understanding of object-oriented programming (OOP) concepts.</li>
+  <li>• Familiarity with front-end technologies (e.g., JavaScript, HTML, CSS).</li>
+  <li>• Experience with version control systems, especially Git.</li>
+  <li>• Knowledge of relational and NoSQL databases (e.g., PostgreSQL, MySQL, MongoDB).</li>
+  <li>• Experience with unit testing and test-driven development (TDD).</li>
+  <li>• Familiarity with cloud platforms (e.g., AWS, Azure, Google Cloud) is a plus.</li>
+  <li>• Strong problem-solving, debugging, and optimization skills.</li>
+  <li>• Excellent communication and collaboration abilities.</li>
+  <li>• Familiarity with containerization technologies (e.g., Docker).</li>
+  <li>• Experience with CI/CD pipelines and DevOps tools is advantageous.</li>
+  <li>• Knowledge of data structures, algorithms, and software design patterns.</li>
+</ul>
+  </div>
+ </div>
+    </div>
+  </div>
+  <!-- careers end -->
+  
+	
+<style>
+ 
+  @media (max-width: 768px) {
+    .service-box10 {
+      flex-direction: column;
+      text-align: center;
+    }
+.text-center {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+</style>
+
+
+
+ <header class="main-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand px-2" href="index.html">
+        <img src="img/logo.png" alt="Site Logo" class="logo-img">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navigation"> <!-- Added id="navigation" matching data-target -->
+        <ul class="navbar-nav mx-auto page-navigation">
+          <li class="nav-item"><a class="nav-link pill-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="https://chat.whatsapp.com/I1V7jwr65wh2llMopYVnKR" class="book-call-btn">Book a Call</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+</head>
+
+<div style="background:#101010; padding: 10px 100px;">
+  <div style="display: grid; grid-template-columns: repeat(5, 1fr); justify-content: center; gap: 16px; margin-bottom: 32px;">
+    <div style="grid-column: span 5; display: flex; justify-content: left; align-items: center;">
+      <img src="img/fybwhite.png" width="149" height="41" alt="IT solutions" text-align="left";>
+    </div>
+  </div>
+ 
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin: 32px 0;">
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Services</h3>
+		<ul style="list-style: none; padding: 0;">
+							<li><a href="./software-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Custom Software Development</a></li>
+			<li><a href="./frontend-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Front-End Development</a></li>
+			<li><a href="./backend-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Back-End Development</a></li>
+			<li><a href="./fullstack-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Full Stack Development</a></li>
+			<li><a href="./devops.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">DevOps Services</a></li>
+			<li><a href="./qa.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Quality Assurance & Testing</a></li>
+			<li><a href="./uiux.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">UI/UX</a></li>
+			<li><a href="./digital-marketing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Digital Marketing</a></li>
+			<li><a href="./sales-outsourcing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Sales Outsourcing</a></li>
+			<li><a href="./tech-support.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Technical Support</a></li>
+			<li><a href="./cs.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Customer Support</a></li>
+		</ul>
+    </div>
+    <div style="flex: 1 1 200px; color: #f6e8ff;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Features</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="./software-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Software Development</a></li>
+        <li><a href="./sales-outsourcing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Sales Outsourcing Solutions</a></li>
+        <li><a href="./devops.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Technological Integrations</a></li>
+        <li><a href="./cs.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Specialized Solutions</a></li>
+  
+      </ul>
+    </div>
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Our Clients</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://comontec.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Comontec</a></li>
+		<li><a href="https://netopayment.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Neto Payment</a></li>
+		   <li><a href="https://pragmaticpayment.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Pragmatic Payment</a></li>
+		<li><a href="https://torrospin.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Torrospin</a></li>
+        <li><a href="https://torrostar.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Torrostar</a></li>
+     
+        
+      </ul>
+    </div>
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">About Us</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="./about.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Who We Are</a></li>
+        <li><a href="./careers.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Careers</a></li>
+		<li><a href="./contact.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;"><li><a href="./contact.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Get a Quote</a></li>
+      </ul>
+    </div>
+  <div style="flex: 1 1 200px; color: black;">
+  <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Contact Us</h3>
+  <ul style="list-style: none; padding: 0; margin-bottom: 8px;">
+    <li>
+      <a href="./contact.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Contact Us</a>
+    </li>
+  </ul>
+
+  <!-- Social Media Icons -->
+  <div style="display: flex; gap: 5px; align-items: center;">
+    <a href="https://www.linkedin.com/company/fyb-technologiescorporation/" target="_blank">
+      <img src="./img/linkedin.png" alt="LinkedIn" style="width: 50px; height: 50px;" />
+    </a>
+    <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+      <img src="./img/telegram.png" alt="Telegram" style="width: 50px; height: 50px;" />
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=%2B639686656197&text=Hi%2C%20let's%20talk!" target="_blank">
+      <img src="./img/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px;" />
+    </a>
+  </div>
+</div>
+
+  </div>
+
+<<div style="margin: 26px auto; padding: 0 20px; max-width: 1310px; display: flex; justify-content: center;">
+  <p style="
+    color: #f6e8ff;
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    font-size: 14px;
+    white-space: normal; /* allow wrapping */
+    line-height: 1.5;
+    ">
+    Delivering high-quality IT and sales solutions designed to accelerate business growth. <br>FYB Technologies offers customized services—from software development to lead generation—with a strategic global outlook.
+  </p>
+</div>
+
+
+<style>
+  .fyb-banner-text {
+    margin: 26px auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: left;
+  }
+
+  .fyb-banner-text p {
+    color: #f6e8ff;
+    text-align: left	;
+    max-width: 1310px;
+    margin: 0 auto;
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  @media (min-width: 992px) {
+    .fyb-banner-text {
+      margin: 26px 109px;
+      padding: 0;
+    }
+
+    .fyb-banner-text p {
+      white-space: nowrap;
+    }
+  }
+</style>
+
+
+<div style="text-align: center;">
+  <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    FYB Technologies Corporation | Registered Number: 2024060154577-02
+  </p>
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    Registered Office: 211 GEN LIM ST., Barangay 5, Calamba, Laguna, Philippines
+  </p>
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    Sales Inquiries:
+    <a href="mailto:support@fyb.com" style="color: #71d0fd;">marketing@fyb-technologies.com</a> |
+    Technical Questions:
+    <a href="mailto:support@fyb.com" style="color: #71d0fd;">support@fyb.comcom</a>
+  </p>
+</div>
+
+<div style="margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Copyright © FYB-Technologies - all rights reserved</p>
+  <div style="display: flex; gap: 20px; justify-content: center; color: black;">
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Privacy Policy</p>
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Terms of Use</p>
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Cookies Policy</p>
+  </div>
+</div>
+
+
+    <!-- /footer -->
+
+<div style="
+    position: fixed;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d1d5db;
+    border-radius: 11px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    height: 135px;
+    transition: all 0.3s ease-in-out;
+">
+  <div style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    ">
+    <a href="https://api.whatsapp.com/send?phone=%2B639686656197&amp;text=Hi%2C let's talk!" target="_blank">
+      <img src="./img/whatsapp.svg" width="22" height="22" style="cursor: pointer;">
+    </a>
+    <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+      <img src="./img/telegram.svg" width="20" height="20" style="cursor: pointer;">
+    </a>
+    <div style="
+        display: flex;
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+      ">
+      <img src="./img/close.svg" width="13" height="13" style="cursor: pointer;">
+    </div>
+  </div>
+</div>
+
+	<!-- ** JS Plugins Needed for the Project ** -->
+	<!-- jquiry -->
+	<script src="plugins/jquery/jquery-1.12.4.js"></script>
+	<!-- Bootstrap JS 
+	<script src="plugins/bootstrap/bootstrap.min.js"></script>-->
+	<!-- match-height JS -->
+	<script src="plugins/match-height/jquery.matchHeight-min.js"></script>
+	<!-- Main Script -->
+	<script src="assets/script.js"></script>
+</body>
+
+</html>

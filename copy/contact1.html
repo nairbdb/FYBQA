@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Dot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="dot" />
+
+	<!-- ** CSS Plugins Needed for the Project ** -->
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<!-- themefy-icon -->
+	<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+	<!--Favicon-->
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Main Stylesheet -->
+	<link href="./css/style.css" rel="stylesheet" media="screen" />
+	<!--  <link rel="stylesheet" href="path/to/bootstrap.min.css"> Include Bootstrap CSS -->
+<style>
+    body, h1, h2, h3, h4, h5, h6, p, a, span, button, input {
+      font-family: 'Montserrat', sans-serif !important;
+	  color: #2B2C30;
+    }
+    /* You can now remove other font-family declarations or override them with Rubik */
+  </style>
+  <style>
+  
+  .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(
+      80deg,
+      rgba(109, 181, 248, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(217, 142, 243, 0.2),
+      rgba(251, 220, 255, 0.1),
+      rgba(203, 91, 216, 0.1),
+      rgba(217, 142, 243, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(202, 229, 255, 0.2),
+      rgba(109, 181, 248, 0.2),
+      rgba(114, 221, 255, 0.2)
+    ),
+    url('img/particle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay; /* Ensures gradient + image mix visually */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .logo-img {
+      max-height: 60px;
+      object-fit: contain;
+    }
+    .book-call-btn:hover {
+      background: #f0f0f0;
+    }
+
+  </style>
+  </head>
+<body>
+
+ <header class="main-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand px-2" href="index.html">
+        <img src="img/logo.png" alt="Site Logo" class="logo-img">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto page-navigation">
+          <li class="nav-item"><a class="nav-link pill-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="book-call.html" class="book-call-btn">Book a Call</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <script>
+  // Get current page URL
+  const currentUrl = window.location.href;
+
+  // Loop through each nav link
+  document.querySelectorAll('.nav-link').forEach(link => {
+    // If the link's href matches the current URL, make it bold
+    if (currentUrl.includes(link.getAttribute('href'))) {
+      link.style.fontWeight = 'bold';
+    }
+  });
+</script>
+<!-- Include Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- banner -->
+
+
+<style>
+  .banner-section2 {
+    background: url(./img/bgsection.png), url('img/particle.png');
+    background-size: fill;
+    background-repeat: repeat-x;
+    border-radius: 0 0 40px 40px;
+    background-position: center;
+    background-blend-mode: overlay;
+    padding: 400px;
+    padding-top: 150px;
+	    padding-bottom: 68px;
+    position: relative;
+    color: black;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  /* Expanded background class */
+  .banner-section.expanded {
+    padding: 600px 0;
+    background-size: contain;
+  }
+
+  /* Optional button styling */
+  .expand-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff33;
+    color: black;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .expand-btn:hover {
+    background-color: #ffffff55;
+  }
+  
+    .banner-section h1,
+  .banner-section h6 {
+    margin-bottom: 20px;
+  }
+</style>
+<section class="banner-section2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 mx-auto text-center text-white">
+        <h1 class="h1-image">Let’s Work Together!</h1>
+			<h6 style="color: #000;"> Ready to transform your business with cutting-edge IT solutions or boost your revenue with our sales expertise? Reach out to us today.</h6>
+      </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  function toggleBackground() {
+    document.getElementById('bannerSection').classList.toggle('expanded');
+  }
+</script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- /banner -->
+        <!-- Include Bootstrap JS and dependencies -->
+  <script src="path/to/bootstrap.bundle.min.js"></script>
+    <!-- /header --> 
+
+
+
+    
+    
+    
+<style>
+.contactus {
+    
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+}
+</style>
+
+	<!-- call to action --><br>
+	
+	 <style>
+.glass-bg {
+
+	 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Left Column -->
+      <div class="col-md-4">
+        <!-- Contact Sales -->
+        <div class="glass-bg mb-4">
+          <h2 class="h4 fw-bold mb-2">Contact Sales</h2>
+          <p class="mb-4">Connect with us for custom solutions or product insights.</p>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img src="./img/check.png" alt="Check" width="18" class="me-2">
+              <span>Request a demo</span>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img src="./img/check.png" alt="Check" width="18" class="me-2">
+              <span>Find the right product for your business</span>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img src="./img/check.png" alt="Check" width="18" class="me-2">
+              <span>Onboarding assistance</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="glass-bg">
+          <h2 class="h4 fw-bold mb-2">Support</h2>
+          <p class="mb-4">Need help with technical issues or products?</p>
+<div style="text-align: center;">
+  <a href="mailto:support@fyb.com" style="text-decoration: none; display: inline-block;">
+    <button style="
+      font-size:16px;
+      font-weight:bold;
+      color:#2B2C30;
+      padding:8px 24px;
+      border:2px solid transparent;
+      background: linear-gradient(#f8f6f2, #f8f6f2) padding-box, 
+                  linear-gradient(80deg, #6db5f866 .47%, #999cf766 9.8%, #d98ef366 17.42%, #fbdcff3d 31.59%, 
+                  #cb5bd83d 46.87%, #d98ef366 55.73%, #999cf766 65.02%, #cae5ff66 77.71%, #6db5f866 89.55%, 
+                  #72ddff66 98.78%) border-box;
+      border-radius:7px;
+      cursor:pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">
+      support@fyb-technologies.com
+    </button>
+  </a>
+</div>
+
+
+        </div>
+      </div>
+
+      <!-- Right Column - Form -->
+      <div class="col-md-8">
+        <form class="glass-bg">
+          <h2 class="h4 fw-bold mb-4">Tell us how we can help</h2>
+
+          <div class="row mb-3">
+            <div class="col-lg-6 mb-3">
+              <label class="form-label">First Name*</label>
+              <input type="text" class="form-control" placeholder="Enter First Name" required>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <label class="form-label">Last Name*</label>
+              <input type="text" class="form-control" placeholder="Enter Last Name" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email*</label>
+            <input type="email" class="form-control" placeholder="Enter Email" required>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Contact No*</label>
+            <div class="row g-2">
+              <div class="col-md-4">
+                <select class="form-select" required>
+                  <<option value="AF">Afghanistan +93</option>
+  <option value="AL">Albania +355</option>   <option value="DZ">Algeria +213</option>   <option value="AS">American Samoa +1-684</option>  <option value="AD">Andorra +376</option>  <option value="AO">Angola +244</option>  <option value="AI">Anguilla +1-264</option>  <option value="AQ">Antarctica +672</option>  <option value="AG">Antigua and Barbuda +1-268</option>  <option value="AR">Argentina +54</option>  <option value="AM">Armenia +374</option>  <option value="AW">Aruba +297</option>  <option value="AU">Australia +61</option>  <option value="AT">Austria +43</option>  <option value="AZ">Azerbaijan +994</option>
+  <option value="BS">Bahamas +1-242</option>  <option value="BH">Bahrain +973</option>  <option value="BD">Bangladesh +880</option>  <option value="BB">Barbados +1-246</option>  <option value="BY">Belarus +375</option>  <option value="BE">Belgium +32</option>  <option value="BZ">Belize +501</option>  <option value="BJ">Benin +229</option>  <option value="BM">Bermuda +1-441</option>  <option value="BT">Bhutan +975</option>  <option value="BO">Bolivia +591</option>  <option value="BA">Bosnia and Herzegovina +387</option>  <option value="BW">Botswana +267</option>  <option value="BR">Brazil +55</option>
+  <option value="IO">British Indian Ocean Territory +246</option>  <option value="VG">British Virgin Islands +1-284</option>  <option value="BN">Brunei +673</option>  <option value="BG">Bulgaria +359</option>  <option value="BF">Burkina Faso +226</option>  <option value="BI">Burundi +257</option>  <option value="KH">Cambodia +855</option>  <option value="CM">Cameroon +237</option>  <option value="CA">Canada +1</option>  <option value="CV">Cape Verde +238</option>  <option value="KY">Cayman Islands +1-345</option>  <option value="CF">Central African Republic +236</option>
+  <option value="TD">Chad +235</option>  <option value="CL">Chile +56</option>  <option value="CN">China +86</option>  <option value="CO">Colombia +57</option>  <option value="KM">Comoros +269</option>  <option value="CD">Congo (DRC) +243</option>  <option value="CG">Congo (Republic) +242</option>  <option value="CK">Cook Islands +682</option>  <option value="CR">Costa Rica +506</option>  <option value="HR">Croatia +385</option>  <option value="CU">Cuba +53</option>  <option value="CY">Cyprus +357</option>  <option value="CZ">Czech Republic +420</option>  <option value="DK">Denmark +45</option>
+  <option value="DJ">Djibouti +253</option>  <option value="DM">Dominica +1-767</option>  <option value="DO">Dominican Republic +1-809</option>  <option value="EC">Ecuador +593</option>  <option value="EG">Egypt +20</option>  <option value="SV">El Salvador +503</option>  <option value="GQ">Equatorial Guinea +240</option>  <option value="ER">Eritrea +291</option>  <option value="EE">Estonia +372</option>  <option value="ET">Ethiopia +251</option>  <option value="FJ">Fiji +679</option>  <option value="FI">Finland +358</option>  <option value="FR">France +33</option>  <option value="GA">Gabon +241</option>  <option value="GM">Gambia +220</option>
+  <option value="GE">Georgia +995</option>  <option value="DE">Germany +49</option>  <option value="GH">Ghana +233</option>  <option value="GR">Greece +30</option>  <option value="GD">Grenada +1-473</option>  <option value="GU">Guam +1-671</option>  <option value="GT">Guatemala +502</option>  <option value="GN">Guinea +224</option>  <option value="GW">Guinea-Bissau +245</option>  <option value="GY">Guyana +592</option>  <option value="HT">Haiti +509</option>  <option value="HN">Honduras +504</option>  <option value="HK">Hong Kong +852</option>  <option value="HU">Hungary +36</option>
+  <option value="IS">Iceland +354</option>  <option value="IN">India +91</option>  <option value="ID">Indonesia +62</option>  <option value="IR">Iran +98</option>  <option value="IQ">Iraq +964</option>  <option value="IE">Ireland +353</option>  <option value="IL">Israel +972</option>  <option value="IT">Italy +39</option>  <option value="JM">Jamaica +1-876</option>  <option value="JP">Japan +81</option>  <option value="JO">Jordan +962</option>  <option value="KZ">Kazakhstan +7</option>  <option value="KE">Kenya +254</option>  <option value="KI">Kiribati +686</option>  <option value="KP">North Korea +850</option>
+  <option value="KR">South Korea +82</option>  <option value="KW">Kuwait +965</option>  <option value="KG">Kyrgyzstan +996</option>  <option value="LA">Laos +856</option>  <option value="LV">Latvia +371</option>  <option value="LB">Lebanon +961</option>  <option value="LS">Lesotho +266</option>  <option value="LR">Liberia +231</option>  <option value="LY">Libya +218</option>  <option value="LI">Liechtenstein +423</option>  <option value="LT">Lithuania +370</option>  <option value="LU">Luxembourg +352</option>  <option value="MO">Macau +853</option>  <option value="MK">North Macedonia +389</option>  <option value="MG">Madagascar +261</option>
+  <option value="MW">Malawi +265</option>  <option value="MY">Malaysia +60</option>  <option value="MV">Maldives +960</option>  <option value="ML">Mali +223</option>  <option value="MT">Malta +356</option>  <option value="MH">Marshall Islands +692</option>  <option value="MR">Mauritania +222</option>  <option value="MU">Mauritius +230</option>  <option value="MX">Mexico +52</option>  <option value="FM">Micronesia +691</option>  <option value="MD">Moldova +373</option>  <option value="MC">Monaco +377</option>  <option value="MN">Mongolia +976</option>  <option value="ME">Montenegro +382</option>
+  <option value="MA">Morocco +212</option>  <option value="MZ">Mozambique +258</option>  <option value="MM">Myanmar +95</option>  <option value="NA">Namibia +264</option>  <option value="NR">Nauru +674</option>  <option value="NP">Nepal +977</option>  <option value="NL">Netherlands +31</option>  <option value="NZ">New Zealand +64</option>  <option value="NI">Nicaragua +505</option>  <option value="NE">Niger +227</option>  <option value="NG">Nigeria +234</option>  <option value="NO">Norway +47</option>  <option value="OM">Oman +968</option>  <option value="PK">Pakistan +92</option>
+  <option value="PW">Palau +680</option>  <option value="PS">Palestine +970</option>  <option value="PA">Panama +507</option>  <option value="PG">Papua New Guinea +675</option>  <option value="PY">Paraguay +595</option>  <option value="PE">Peru +51</option>  <option value="PH">Philippines +63</option>  <option value="PL">Poland +48</option>  <option value="PT">Portugal +351</option>  <option value="QA">Qatar +974</option>  <option value="RO">Romania +40</option>  <option value="RU">Russia +7</option>  <option value="RW">Rwanda +250</option>  <option value="KN">Saint Kitts and Nevis +1-869</option>  <option value="LC">Saint Lucia +1-758</option>
+  <option value="VC">Saint Vincent and the Grenadines +1-784</option>  <option value="WS">Samoa +685</option>  <option value="SM">San Marino +378</option>  <option value="ST">Sao Tome and Principe +239</option>  <option value="SA">Saudi Arabia +966</option>  <option value="SN">Senegal +221</option>  <option value="RS">Serbia +381</option>  <option value="SC">Seychelles +248</option>  <option value="SL">Sierra Leone +232</option>  <option value="SG">Singapore +65</option>  <option value="SK">Slovakia +421</option>  <option value="SI">Slovenia +386</option>  <option value="SB">Solomon Islands +677</option>  <option value="SO">Somalia +252</option>
+  <option value="ZA">South Africa +27</option>  <option value="SS">South Sudan +211</option>  <option value="ES">Spain +34</option>  <option value="LK">Sri Lanka +94</option>  <option value="SD">Sudan +249</option>  <option value="SR">Suriname +597</option>  <option value="SE">Sweden +46</option>  <option value="CH">Switzerland +41</option>  <option value="SY">Syria +963</option>  <option value="TW">Taiwan +886</option>  <option value="TJ">Tajikistan +992</option>  <option value="TZ">Tanzania +255</option>
+  <option value="TH">Thailand +66</option>  <option value="TG">Togo +228</option>  <option value="TO">Tonga +676</option>  <option value="TT">Trinidad and Tobago +1-868</option>  <option value="TN">Tunisia +216</option>  <option value="TR">Turkey +90</option>  <option value="TM">Turkmenistan +993</option>  <option value="TV">Tuvalu +688</option>  <option value="UG">Uganda +256</option>  <option value="UA">Ukraine +380</option>  <option value="AE">United Arab Emirates +971</option>  <option value="GB">United Kingdom +44</option>  <option value="US">United States +1</option>  <option value="UY">Uruguay +598</option>
+  <option value="UZ">Uzbekistan +998</option>  <option value="VU">Vanuatu +678</option>  <option value="VA">Vatican City +379</option>  <option value="VE">Venezuela +58</option>  <option value="VN">Vietnam +84</option>  <option value="YE">Yemen +967</option>  <option value="ZM">Zambia +260</option>  <option value="ZW">Zimbabwe +263</option>
+                </select>
+              </div>
+			  
+              <div class="col-md-8">
+                <input type="tel" class="form-control" placeholder="Phone Number" required>
+              </div>
+            </div>
+          </div>
+		  
+<div class="mb-3">
+  <label for="message" class="form-label fw-medium">Message</label>
+  <textarea class="form-control" id="message" rows="7" placeholder="Enter Message"></textarea>
+</div>
+          <div class="button-wrapper1">
+  <a href="./services.html">
+  <button class="consultation-button1">Submit</button></a>
+
+</div>
+        </form>
+      </div>
+    </div>
+  </div>
+    </section>
+
+	<!-- /call to action -->
+
+	<!-- footer -->
+
+    <!-- footer -->
+    <footer>
+   <style>
+ .footer {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url('./img/footer-accent.png');
+    background-blend-mode: overlay, normal, normal;
+    background-size: 1000px;
+    background-position: center;
+    padding: 2rem 1rem;
+    z-index: -1; /* Ensure it layers properly */
+    overflow: visible; /* Allow pseudo-element to overflow */
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -150px; /* Adjust how much it overlaps into about-cta */
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: url('./img/footer-accent.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    z-index: 1; /* Place it behind footer content but above about-cta */
+}
+
+  .footer .layer-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .footer .footer-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer .footer-top {
+      flex-direction: row;
+    }
+  }
+
+  .footer .footer-logo {
+    width: 152px;
+  }
+
+  .footer .social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .footer .social-links img {
+    width: 16px;
+  }
+
+  .footer .footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer .footer-bottom {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .footer .footer-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    .footer .footer-text {
+      text-align: left;
+    }
+  }
+
+  .footer .footer-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .footer .footer-links {
+      justify-content: flex-end;
+    }
+  }
+
+  .footer .footer-links li {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .footer .footer-links a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .footer .footer-links a:hover {
+    text-decoration: underline;
+  }
+</style>
+<!--<footer class="footer">
+  <div class="layer-background"></div>
+  <div class="footer-content">
+    <div class="footer-top">
+      <img class="footer-logo" src="./img/logo.png" alt="FYB Technologies Logo" />
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/fyb-technologiescorporation/" target="_blank">
+          <img src="./img/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+          <img src="./img/telegram.svg" alt="telegram" />
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=%2B639686656197&text=Hi%2C%20let's%20talk!" target="_blank">
+          <img src="./img/whatsapp.svg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-text">
+        © 2025 FYB Technologies. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</section> -->
+<div style="background:#101010; padding: 10px 100px;">
+  <div style="display: grid; grid-template-columns: repeat(5, 1fr); justify-content: center; gap: 16px; margin-bottom: 32px;">
+    <div style="grid-column: span 5; display: flex; justify-content: left; align-items: center;">
+      <img src="img/fybwhite.png" width="149" height="41" alt="IT solutions" text-align="left";>
+    </div>
+  </div>
+ <!-- <div style="display: flex; flex-direction: column; align-items: center; gap: 24px;">
+    <div style="margin-bottom: 32px;">
+      <img src="img/zilla.svg" alt="Zilla logo" style="width: 100%; max-width: 500px;">
+    </div>
+    <div style="color: #f6e8ff; max-width: 800px; text-align: center;">
+      The website <u>pragmaticpayment.com</u> is provided by Zilla Elit KFT, registered at Petõfi Sándor utca 48, Újlengyel, with company registration number 13-09-225880. pragmaticpayment.com will exclusively use the Registered Email Address you provided during account creation to communicate with customers. All communication from PragmaticPayment will occur through the email address: <a href="mailto:finance@pragmaticpayment.com" style="color: #71d0fd;">finance@pragmaticpayment.com</a>
+    </div>
+  </div> -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin: 32px 0;">
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Services</h3>
+		<ul style="list-style: none; padding: 0;">
+				<li><a href="./software-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Custom Software Development</a></li>
+				<li><a href="./sales-outsourcing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Sales Outsourcing</a></li>
+				<li><a href="./qa.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Quality Assurance & Testing</a></li>
+				<li><a href="./digital-marketing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Digital Marketing</a></li>
+				<li><a href="./devops.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">DevOps Services</a></li>
+				<li><a href="./tech-support.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Technical Support</a></li>
+				<li><a href="./cs.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Customer Support</a></li>
+		</ul>
+    </div>
+    <div style="flex: 1 1 200px; color: #f6e8ff;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Features</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="./software-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Software Development</a></li>
+        <li><a href="./sales-outsourcing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Sales Outsourcing Solutions</a></li>
+        <li><a href="./devops.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Technological Integrations</a></li>
+        <li><a href="./cs.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Specialized Solutions</a></li>
+  
+      </ul>
+    </div>
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Our Clients</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://comontec.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Comontec</a></li>
+		   <li><a href="https://pragmaticpayments.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Pragmatic Payment</a></li>
+		<li><a href="https://torrospin.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Torrospin</a></li>
+        <li><a href="https://torrostar.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Torrostar</a></li>
+     
+        
+      </ul>
+    </div>
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">About Us</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="./about.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Who We Are</a></li>
+        <li><a href="/contact1.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Get a Quote</a></li>
+      </ul>
+    </div>
+  <div style="flex: 1 1 200px; color: black;">
+  <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Contact Us</h3>
+  <ul style="list-style: none; padding: 0; margin-bottom: 8px;">
+    <li>
+      <a href="./contact1.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Contact Us</a>
+    </li>
+  </ul>
+
+  <!-- Social Media Icons -->
+  <div style="display: flex; gap: 5px; align-items: center;">
+    <a href="https://www.linkedin.com/company/fyb-technologiescorporation/" target="_blank">
+      <img src="./img/linkedin.png" alt="LinkedIn" style="width: 50px; height: 50px;" />
+    </a>
+    <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+      <img src="./img/telegram.png" alt="Telegram" style="width: 50px; height: 50px;" />
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=%2B639686656197&text=Hi%2C%20let's%20talk!" target="_blank">
+      <img src="./img/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px;" />
+    </a>
+  </div>
+</div>
+
+  </div>
+<div style="margin: 26px 109px; display: flex; justify-content: center;">
+  <p style="color: #f6e8ff; text-align: left; max-width: 1310px; margin: 0 auto; font-size: 14px; white-space: nowrap;">
+    Delivering high-quality IT and sales solutions designed to accelerate business growth. FYB Technologies offers customized services—from software development to lead generation—with a strategic global outlook.
+  </p>
+</div>
+
+
+<div style="text-align: center;">
+  <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    FYB Technologies Corporation | Registered Number: 2024060154577-02
+  </p>
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    Registered Office: 211 GEN LIM ST., Barangay 5, Calamba, Laguna, Philippines
+  </p>
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    Sales Inquiries:
+    <a href="mailto:support@fyb.com" style="color: #71d0fd;">marketing@fyb-technologies.com</a> |
+    Technical Questions:
+    <a href="mailto:support@fyb.com" style="color: #71d0fd;">support@fyb.comcom</a>
+  </p>
+</div>
+
+<div style="margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Copyright © PragmaticPayment - all rights reserved</p>
+  <div style="display: flex; gap: 20px; justify-content: center; color: black;">
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Privacy Policy</p>
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Terms of Use</p>
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Cookies Policy</p>
+  </div>
+</div>
+
+
+    <!-- /footer -->
+
+<div style="
+    position: fixed;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d1d5db;
+    border-radius: 11px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    height: 135px;
+    transition: all 0.3s ease-in-out;">
+  <div style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s ease, transform 0.3s ease;">
+    <a href="https://api.whatsapp.com/send?phone=%2B639686656197&amp;text=Hi%2C let's talk!" target="_blank">
+      <img src="./img/whatsapp.svg" width="22" height="22" style="cursor: pointer;">
+    </a>
+    <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+      <img src="./img/telegram.svg" width="20" height="20" style="cursor: pointer;">
+    </a>
+    <div style="
+        display: flex;
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+      ">
+      <img src="./img/close.svg" width="13" height="13" style="cursor: pointer;">
+    </div>
+  </div>
+</div>
+
+    <!-- ** JS Plugins Needed for the Project ** -->
+    <!-- jquiry -->
+    <script src="plugins/jquery/jquery-1.12.4.js"></script>
+    <!-- Bootstrap JS 
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>-->
+    <!-- match-height JS -->
+    <script src="plugins/match-height/jquery.matchHeight-min.js"></script>
+    <!-- Main Script -->
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

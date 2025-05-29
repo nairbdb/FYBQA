@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Dot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="dot" />
+
+	<!-- ** CSS Plugins Needed for the Project ** -->
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<!-- themefy-icon -->
+	<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+	<!--Favicon-->
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Main Stylesheet -->
+	<link href="./css/style.css" rel="stylesheet" media="screen" />
+	<!--  <link rel="stylesheet" href="path/to/bootstrap.min.css"> Include Bootstrap CSS -->
+<style>
+    body, h1, h2, h3, h4, h5, h6, p, a, span, button, input {
+      font-family: 'Montserrat', sans-serif !important;
+	  color: #2B2C30;
+    }
+    /* You can now remove other font-family declarations or override them with Rubik */
+  </style>
+  <style>
+  
+  .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(
+      80deg,
+      rgba(109, 181, 248, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(217, 142, 243, 0.2),
+      rgba(251, 220, 255, 0.1),
+      rgba(203, 91, 216, 0.1),
+      rgba(217, 142, 243, 0.2),
+      rgba(153, 156, 247, 0.2),
+      rgba(202, 229, 255, 0.2),
+      rgba(109, 181, 248, 0.2),
+      rgba(114, 221, 255, 0.2)
+    ),
+    url('img/particle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay; /* Ensures gradient + image mix visually */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .logo-img {
+      max-height: 60px;
+      object-fit: contain;
+    }
+    .book-call-btn:hover {
+      background: #f0f0f0;
+    }
+
+  </style>
+  </head>
+<body>
+<style>
+  /* Ensure consistent font and size for nav items */
+.nav-link {
+  font-family: 'Rubik', sans-serif !important; /* Or any font you prefer */
+  font-size: 16px; /* Set a consistent font size */
+  font-weight: normal; /* Set a consistent font weight */
+  color: #2B2C30; /* Or any color you prefer for the text */
+  text-decoration: none; /* Remove underlines from links */
+}
+
+/* Optional: Styling for active links if needed */
+.nav-item .active {
+  font-weight: bold; /* Make the active nav item bold */
+}
+
+</style>
+ <header class="main-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand px-2" href="index.html">
+        <img src="img/logo.png" alt="Site Logo" class="logo-img">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto page-navigation">
+          <li class="nav-item"><a class="nav-link pill-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="book-call.html" class="book-call-btn">Book a Call</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <script>
+  // Get current page URL
+  const currentUrl = window.location.href;
+
+  // Loop through each nav link
+  document.querySelectorAll('.nav-link').forEach(link => {
+    // If the link's href matches the current URL, make it bold
+    if (currentUrl.includes(link.getAttribute('href'))) {
+      link.style.fontWeight = 'bold';
+    }
+  });
+</script>
+<!-- Include Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- banner -->
+
+
+<style>
+  .banner-section2 {
+    background: url(./img/bgsection.png), url('img/particle.png');
+    background-size: fill;
+    background-repeat: repeat-x;
+    border-radius: 0 0 40px 40px;
+    background-position: center;
+    background-blend-mode: overlay;
+    padding: 400px;
+    padding-top: 150px;
+	    padding-bottom: 37px;
+    position: relative;
+    color: black;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  /* Expanded background class */
+  .banner-section.expanded {
+    padding: 600px 0;
+    background-size: contain;
+  }
+
+  /* Optional button styling */
+  .expand-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff33;
+    color: black;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .expand-btn:hover {
+    background-color: #ffffff55;
+  }
+  
+    .banner-section h1,
+  .banner-section h6 {
+    margin-bottom: 20px;
+  }
+</style>
+<section class="banner-section2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 mx-auto text-center text-white">
+        <h1 class="h1-image">Empowering Businesses</h1>
+        <h1 class="h1-image2">with Exceptional Talent</h1>
+        <h6 style="color: #000;">
+          Providing end-to-end IT and sales outsourcing solutions designed to enhance <br>
+          operational efficiency, drive revenue growth, and deliver exceptional results for <br>
+          businesses worldwide.
+        </h6>
+      </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  function toggleBackground() {
+    document.getElementById('bannerSection').classList.toggle('expanded');
+  }
+</script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- /banner -->
+        <!-- Include Bootstrap JS and dependencies -->
+  <script src="path/to/bootstrap.bundle.min.js"></script>
+    <!-- /header --> 
+
+
+
+    
+    
+    
+<!-- topics -->
+<style>
+  .section {
+    background-image: url('./img/Footer1.png');
+    background-repeat: repeat; /* ensures it repeats both vertically and horizontally */
+    background-size: auto; /* or you can use `contain` or a specific value like `100px` */
+    background-position: top left;
+  }
+</style>
+
+    
+        <div class="container d-flex flex-column align-items-center justify-content-center gap-3" 
+				style="max-width: 640px; margin: auto;">
+        
+        <style>
+        .services-1{
+         border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1rem;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(
+            80deg,
+            #6db5f866 .47%,
+            #999cf766 9.8%,
+            #d98ef366 17.42%,
+            #fbdcff3d 31.59%,
+            #cb5bd83d 46.87%,
+            #d98ef366 55.73%,
+            #999cf766 65.02%,
+            #cae5ff66 77.71%,
+            #6db5f866 89.55%,
+            #72ddff66 98.78%
+          ),
+          #f8f6f2;
+        box-shadow: 0 10px 15px #a738fe40;
+        color: rgb(43 44 48 / 1);
+        border: none;
+        cursor: default;
+      } 
+        
+        body {
+          margin: 0;
+          font-family: 'Montserrat', sans-serif !important;
+          background: #f9f9f9;
+		  color: #2B2C30;
+        }
+
+        .about-content-section {
+          padding: 2rem 1rem;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+          .about-content-section {
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+          }
+        }
+
+
+        @media (min-width: 768px) {
+          .about-left {
+            grid-column: span 5;
+          }
+        }
+
+        .about-right {
+          grid-column: span 12;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+          .about-right {
+            grid-column: span 7;
+          }
+        }
+
+        .about-heading {
+          font-size: 36px;
+          font-weight: 700;
+          color: #2B2C30;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .about-card {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 1rem;
+          backdrop-filter: blur(5px);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+          align-items: center;
+          text-align: center;
+          width: var(--about-card-width);
+          min-height: var(--about-card-height);
+          max-width: 1000%;
+          box-sizing: border-box;
+        }
+
+        @media (min-width: 768px) {
+          .about-card {
+            flex-direction: row;
+            text-align: left;
+            align-items: flex-start;
+          }
+        }
+
+        .about-card img {
+          width: 69px;
+          height: 69px;
+          flex-shrink: 0;
+        }
+
+        .about-card div {
+          flex: 1;
+        }
+
+        .about-card h2 {
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+
+        .about-card h3 {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0;
+        }
+
+        /* CTA Section */
+       .about-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    width: 440%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+        .about-cta h2 {
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 1.2;
+          max-width: 426px;
+          margin-bottom: 2rem;
+        }
+
+        .about-cta h3 {
+          font-size: 16px;
+          font-weight: 500;
+          max-width: 734px;
+          margin-bottom: 2rem;
+        }
+
+        .primary-button {
+          background: linear-gradient(80deg, #6db5f866 .47%, #999cf766 9.8%, #d98ef366 17.42%, #fbdcff3d 31.59%, #cb5bd83d 46.87%, #d98ef366 55.73%, #999cf766 65.02%, #cae5ff66 77.71%, #6db5f866 89.55%, #72ddff66 98.78%), #f8f6f2;
+          box-shadow: 0 10px 15px #a738fe40;
+          color: #000;
+          font-size: 0.75rem;
+          border-radius: 9999px;
+         font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1rem;
+            padding: 1rem 2.5rem;
+          padding: 0.5rem 1.2rem;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          font-weight: 600;
+        }
+
+
+        .about-left {
+      display: flex;
+      justify-content: flex-start; /* Move to left */
+      align-items: center;
+      width: 100%;
+    }
+
+    .movable-logo {
+      transition: all 0.3s ease; /* Smooth transition for movement */
+    }
+
+    /* Move image to the right */
+    .about-left.right {
+      justify-content: flex-end;
+    }
+      </style>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</head>
+<body>
+
+
+
+
+<!-- Scaling Businesses with Efficiency -->
+<body>
+  <style>
+    .services-grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+	      text-align: left;
+    }
+
+    .big-image-column {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+
+    .big-image-column img {
+      width: 100%;
+      height: auto;
+      max-width: 350px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .service-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .service-box2 {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      gap: 10px;
+      width: 139%;
+      box-sizing: border-box;
+      padding: 5px;
+    }
+
+    .service-img2 {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-text2 h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 5px 0;
+      line-height: 1;
+    }
+
+    .service-text2 p {
+      font-size: 18px;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+   .page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 0vh;
+    padding: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+    .custom-h3 {
+      
+      font-weight: 700;
+      margin: 0 -527px -45px 27px;
+      font-family: 'Montserrat', sans-serif !important;
+	  color: #2B2C30;
+	  
+    }
+
+    .about-cta {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .about-cta h2 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .about-cta h3 {
+      font-size: 18px;
+      font-weight: 400;
+      margin: 20px 0;
+    }
+
+    .primary-button {
+      display: inline-block;
+     linear-gradient(80deg, rgba(109, 181, 248, 0.2), rgba(153, 156, 247, 0.2), rgba(217, 142, 243, 0.2), rgba(251, 220, 255, 0.1), rgba(203, 91, 216, 0.1), rgba(217, 142, 243, 0.2), 
+	 rgba(153, 156, 247, 0.2), rgba(202, 229, 255, 0.2), rgba(109, 181, 248, 0.2), rgba(114, 221, 255, 0.2))
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      
+    }
+
+  </style>
+<!-- Combined section starts here -->
+    <div class="text-center my-5">
+      <h2 class="custom-h3" style="color:#000;">Scaling Businesses with Efficiency</h2>
+    </div>
+
+    <div class="services-grid2" style="margin-top: 30px;">
+      <!-- Left column: Big image -->
+      <div class="big-image-column">
+        <img src="./img/fyb-logo.png" alt="FYB Logo">
+      </div>
+
+      <!-- Right column: Service boxes -->
+      <div class="service-column">
+        <div class="service-box2">
+          <img src="./img/about-us-1.png" alt="Innovation" class="service-img2"> 
+          <div class="service-text2">
+        <br>    <h2>Innovation</h2>
+            <p>Constantly pushing the boundaries of technology and sales strategies.</p><br>
+          </div>
+        </div>
+
+        <div class="service-box2">
+          <img src="./img/about-us-2.png" alt="Integrity" class="service-img2">
+          <div class="service-text2">
+            <br><h2>Integrity</h2>
+            <p>Building long-term relationships based on trust and transparency.</p><br>
+          </div>
+        </div>
+
+        <div class="service-box2">
+          <img src="./img/about-us-3.png" alt="Excellence" class="service-img2">
+          <div class="service-text2">
+            <br><h2>Excellence</h2>
+            <p>Delivering top-notch solutions that exceed expectations.</p><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Combined section ends here -->
+
+  </div>
+</section>
+
+  <section class="about-cta">
+    <h2>Ready to scale your brand to new heights?</h2>
+    <h3>FYB Technologies Corporation was founded on the principle of harnessing the exceptional talent of the Philippines. Combining technical expertise with proven sales strategies, we aim to help businesses scale effectively and efficiently.</h3>
+    <a href="/contact" class="primary-button">Book a Call</a>
+  </section>
+  </div>
+</body>
+</header>
+<br><br><br>
+
+    <!-- /call to action -->
+
+<!--<footer class="footer">
+  <div class="layer-background"></div>
+  <div class="footer-content">
+    <div class="footer-top">
+      <img class="footer-logo" src="./img/logo.png" alt="FYB Technologies Logo" />
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/fyb-technologiescorporation/" target="_blank">
+          <img src="./img/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+          <img src="./img/telegram.svg" alt="telegram" />
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=%2B639686656197&text=Hi%2C%20let's%20talk!" target="_blank">
+          <img src="./img/whatsapp.svg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-text">
+        © 2025 FYB Technologies. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</section> -->
+<div style="background:#101010; padding: 10px 100px;">
+  <div style="display: grid; grid-template-columns: repeat(5, 1fr); justify-content: center; gap: 16px; margin-bottom: 32px;">
+    <div style="grid-column: span 5; display: flex; justify-content: left; align-items: center;">
+      <img src="img/fybwhite.png" width="149" height="41" alt="IT solutions" text-align="left";>
+    </div>
+  </div>
+ <!-- <div style="display: flex; flex-direction: column; align-items: center; gap: 24px;">
+    <div style="margin-bottom: 32px;">
+      <img src="img/zilla.svg" alt="Zilla logo" style="width: 100%; max-width: 500px;">
+    </div>
+    <div style="color: #f6e8ff; max-width: 800px; text-align: center;">
+      The website <u>pragmaticpayment.com</u> is provided by Zilla Elit KFT, registered at Petõfi Sándor utca 48, Újlengyel, with company registration number 13-09-225880. pragmaticpayment.com will exclusively use the Registered Email Address you provided during account creation to communicate with customers. All communication from PragmaticPayment will occur through the email address: <a href="mailto:finance@pragmaticpayment.com" style="color: #71d0fd;">finance@pragmaticpayment.com</a>
+    </div>
+  </div> -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin: 32px 0;">
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Services</h3>
+		<ul style="list-style: none; padding: 0;">
+				<li><a href="./software-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Custom Software Development</a></li>
+				<li><a href="./sales-outsourcing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Sales Outsourcing</a></li>
+				<li><a href="./qa.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Quality Assurance & Testing</a></li>
+				<li><a href="./digital-marketing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Digital Marketing</a></li>
+				<li><a href="./devops.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">DevOps Services</a></li>
+				<li><a href="./tech-support.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Technical Support</a></li>
+				<li><a href="./cs.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Customer Support</a></li>
+		</ul>
+    </div>
+    <div style="flex: 1 1 200px; color: #f6e8ff;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Features</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="./software-development.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Software Development</a></li>
+        <li><a href="./sales-outsourcing.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Sales Outsourcing Solutions</a></li>
+        <li><a href="./devops.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Technological Integrations</a></li>
+        <li><a href="./cs.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Specialized Solutions</a></li>
+  
+      </ul>
+    </div>
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Our Clients</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://comontec.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Comontec</a></li>
+		   <li><a href="https://pragmaticpayments.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Pragmatic Payment</a></li>
+		<li><a href="https://torrospin.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Torrospin</a></li>
+        <li><a href="https://torrostar.com" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Torrostar</a></li>
+     
+        
+      </ul>
+    </div>
+    <div style="flex: 1 1 200px; color: black;">
+      <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">About Us</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="./about.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Who We Are</a></li>
+        <li><a href="/contact1.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Get a Quote</a></li>
+      </ul>
+    </div>
+  <div style="flex: 1 1 200px; color: black;">
+  <h3 style="font-size: 18px; font-weight: 500; background: none; color: #71d0fd;">Contact Us</h3>
+  <ul style="list-style: none; padding: 0; margin-bottom: 8px;">
+    <li>
+      <a href="./contact1.html" style="color: #f6e8ff; font-size: 12px; text-decoration: none;">Contact Us</a>
+    </li>
+  </ul>
+
+  <!-- Social Media Icons -->
+  <div style="display: flex; gap: 5px; align-items: center;">
+    <a href="https://www.linkedin.com/company/fyb-technologiescorporation/" target="_blank">
+      <img src="./img/linkedin.png" alt="LinkedIn" style="width: 50px; height: 50px;" />
+    </a>
+    <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+      <img src="./img/telegram.png" alt="Telegram" style="width: 50px; height: 50px;" />
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=%2B639686656197&text=Hi%2C%20let's%20talk!" target="_blank">
+      <img src="./img/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px;" />
+    </a>
+  </div>
+</div>
+
+  </div>
+<div style="margin: 26px 109px; display: flex; justify-content: center;">
+  <p style="color: #f6e8ff; text-align: left; max-width: 1310px; margin: 0 auto; font-size: 14px; white-space: nowrap;">
+    Delivering high-quality IT and sales solutions designed to accelerate business growth. FYB Technologies offers customized services—from software development to lead generation—with a strategic global outlook.
+  </p>
+</div>
+
+
+<div style="text-align: center;">
+  <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    FYB Technologies Corporation | Registered Number: 2024060154577-02
+  </p>
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    Registered Office: 211 GEN LIM ST., Barangay 5, Calamba, Laguna, Philippines
+  </p>
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">
+    Sales Inquiries:
+    <a href="mailto:support@fyb.com" style="color: #71d0fd;">marketing@fyb-technologies.com</a> |
+    Technical Questions:
+    <a href="mailto:support@fyb.com" style="color: #71d0fd;">support@fyb.comcom</a>
+  </p>
+</div>
+
+<div style="margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+    <p style="color: #f6e8ff; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Copyright © FYB-Technologies - all rights reserved</p>
+  <div style="display: flex; gap: 20px; justify-content: center; color: black;">
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Privacy Policy</p>
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Terms of Use</p>
+	    <p style="color: #71d0fd; text-align: center; max-width: 495px; margin: 0 auto; font-size: 14px;">Cookies Policy</p>
+  </div>
+</div>
+
+
+    <!-- /footer -->
+
+
+<div style="
+    position: fixed;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d1d5db;
+    border-radius: 11px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    height: 135px;
+    transition: all 0.3s ease-in-out;">
+  <div style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s ease, transform 0.3s ease;">
+    <a href="https://api.whatsapp.com/send?phone=%2B639686656197&amp;text=Hi%2C let's talk!" target="_blank">
+      <img src="./img/whatsapp.svg" width="22" height="22" style="cursor: pointer;">
+    </a>
+    <a href="https://t.me/+Rg0LAg61n8hmOWQ9" target="_blank">
+      <img src="./img/telegram.svg" width="20" height="20" style="cursor: pointer;">
+    </a>
+    <div style="
+        display: flex;
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+      ">
+      <img src="./img/close.svg" width="13" height="13" style="cursor: pointer;">
+    </div>
+  </div>
+</div>
+
+    <!-- ** JS Plugins Needed for the Project ** -->
+    <!-- jquiry -->
+    <script src="plugins/jquery/jquery-1.12.4.js"></script>
+    <!-- Bootstrap JS 
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>-->
+    <!-- match-height JS -->
+    <script src="plugins/match-height/jquery.matchHeight-min.js"></script>
+    <!-- Main Script -->
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
